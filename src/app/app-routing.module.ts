@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router'
 
 const routes: Routes = [
   {
+    path: '',
+    loadComponent: () =>
+      import('./pages/one/one.component').then(mod => mod.OneComponent),
+  },
+  {
     path: 'one',
     loadComponent: () =>
       import('./pages/one/one.component').then(mod => mod.OneComponent),
