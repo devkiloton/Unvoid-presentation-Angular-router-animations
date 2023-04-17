@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<nav>
+  <a routerLink="/one">one</a>
+  <a routerLink="/two">two</a>
+  <a routerLink="/three">three</a>
+</nav>
+
+<!-- Defining an animation called @routeAnimations that calls prepareRoute() that determines which animation implement -->
+<main [@routeAnimations]="prepareRoute(outlet)" class="content">
+  <!-- Defining a template variable -->
+  <router-outlet #outlet="outlet"></router-outlet>
+</main>
