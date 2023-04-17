@@ -16,11 +16,13 @@ const routes: Routes = [
     path: 'two',
     loadComponent: () =>
       import('./pages/two/two.component').then(mod => mod.TwoComponent),
+      data: {animation: 'isRight'}
   },
   {
-    path: '',
+    path: 'three',
     loadComponent: () =>
       import('./pages/three/three.component').then(mod => mod.ThreeComponent),
+      data: {animation: 'isLeft'}
   }
 ]
 
